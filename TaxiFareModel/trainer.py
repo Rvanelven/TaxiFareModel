@@ -83,6 +83,10 @@ class Trainer():
     def mlflow_log_metric(self, key, value):
         self.mlflow_client.log_metric(self.mlflow_run.info.run_id, key, value)
 
+    def save_model(self):
+        """ Save the trained model into a model.joblib file """
+        pass
+
 
 if __name__ == "__main__":
     df = get_data()
